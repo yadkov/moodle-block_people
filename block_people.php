@@ -85,7 +85,7 @@ class block_people extends block_base {
         foreach ($teachers as $id => $tr) {
             if (count($tr) > 0) {
                 // Write heading and open new list
-                $this->content->text .= html_writer::tag('h3', $rolenames[$id]);
+//                $this->content->text .= html_writer::tag('h3', $rolenames[$id]);
                 $this->content->text .= html_writer::start_tag('ul');
 
                 // Do for every teacher with this role
