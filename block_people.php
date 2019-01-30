@@ -69,8 +69,8 @@ class block_people extends block_base {
         // Get teachers separated by roles
         $CFG->coursecontact = trim($CFG->coursecontact);
         if (!empty($CFG->coursecontact)) {
-            $teacherroles = explode(',', $CFG->coursecontact);
-            var_dump($teacherroles);
+            //$teacherroles = explode(',', $CFG->coursecontact);
+            $teacherroles = array(9, 3, 4); //chairman, editing teacher, teacher
             foreach($teacherroles as $tr) {
                 $teachers[$tr] = get_role_users($tr, $currentcontext, true, 'u.id, u.lastname, u.firstname, u.firstnamephonetic, u. lastnamephonetic, u.middlename, u.alternatename, u.picture, u.imagealt, u.email', 'u.lastname ASC, u.firstname ASC');
             }
