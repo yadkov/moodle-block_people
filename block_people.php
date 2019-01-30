@@ -70,6 +70,7 @@ class block_people extends block_base {
         $CFG->coursecontact = trim($CFG->coursecontact);
         if (!empty($CFG->coursecontact)) {
             $teacherroles = explode(',', $CFG->coursecontact);
+            var_dump($teacherroles);
             foreach($teacherroles as $tr) {
                 $teachers[$tr] = get_role_users($tr, $currentcontext, true, 'u.id, u.lastname, u.firstname, u.firstnamephonetic, u. lastnamephonetic, u.middlename, u.alternatename, u.picture, u.imagealt, u.email', 'u.lastname ASC, u.firstname ASC');
             }
